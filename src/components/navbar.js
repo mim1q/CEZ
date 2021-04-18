@@ -1,11 +1,12 @@
-import React, {useContext} from 'react';
-import styled, {ThemeContext} from 'styled-components';
-import logo_cez_light from '../images/logo-cez-light.svg';
+import React, {useState} from 'react';
+import styled from 'styled-components';
 import logo_cez_dark from '../images/logo-cez-dark.svg';
 import {device} from '../definitions/devices';
 import {useMediaQuery} from 'react-responsive';
-import NavbarLink from './navbar_link'
-import { DarkTheme } from '../definitions/themes';
+import NavbarMenu from './navbar_menu'
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 const NavbarContainer = styled.div`
     position: fixed;
@@ -16,13 +17,15 @@ const NavbarContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     padding: 10px;
     height: 50px;
 
-    font-family: ${props => props.theme.fonts.primary};
-    background-color: ${props => props.theme.backgroundColor};
+    box-shadow: 0px 5px 10px 0px ${({theme}) => theme.shadowColor};
+    z-index: 100;
+
+    font-family: ${({theme}) => theme.fonts.primary};
+    background-color: ${({theme}) => theme.backgroundColor};
 
     @media ${device.tablet} {
         letter-spacing: 0.1em;
@@ -31,84 +34,96 @@ const NavbarContainer = styled.div`
     @media ${device.laptop} {
         padding: 10px 40px 10px 40px;
     }
-`
+
+    &.hidden {
+        top: -70px;
+    }
+`;
 
 const NavbarLogoContainer = styled.div`
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 100%;
 
-    grid-template-columns: 50px autofit;
-    grid-template-rows: 25px 25px;
-    grid-template-areas:
-        "image text-top"
-        "image text-bottom";
-
     &>img {
-        grid-area: image;
         height: 50px;
         margin-right: 10px;
     }
 
     &>span {
-        word-wrap: break-word; 
-        color: ${props => props.theme.accentColor};
+        color: ${({theme}) => theme.accentColor};
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: left;
+
+        line-height: 1em;
+        font-weight: 300;
     }
 
-    &>span:last-child {
-        color: ${props => props.theme.textSecondaryColor};
+    &>span>span {
+        color: ${({theme}) => theme.textSecondaryColor};
         font-weight: 100;
-        &:before {
-            content: ' ';
-        }
     }
-`
+`;
 
-
-const NavbarMenu = styled.nav`
+const NavbarButton = styled.button`
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    height: 20px;
+    width: 50px;
+    height: 50px;
 
-    &>button {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
-    }
-`
+    background: none;
+    border: none;
+
+    color: ${({theme}) => theme.textSecondaryColor};
+    font-size: 1.75rem;
+
+    cursor: pointer;
+`;
 
 
-const Navbar = ({themeCallback}) => {
+const Navbar = () => {
+
+    const [MobileMenuHidden, setMobileMenuHidden] = useState(true);
 
     const isLaptop = useMediaQuery({query: device.laptop});
     const isMobileL = useMediaQuery({query: device.mobileL});
 
-    const themeContext = useContext(ThemeContext);
+    const links = [
+        {path: '#', name: 'Strona główna'},
+        {path: '#', name: 'Aktualności'},
+        {path: '#', name: 'Plan Lekcji'},
+        {path: '#', name: 'Kontakt'},
+    ]
 
     return (
-    <NavbarContainer>
-        <NavbarLogoContainer>
-            <img 
-                src={themeContext === DarkTheme ? logo_cez_dark : logo_cez_light} 
-                alt="Logo Centrum Edukacji Zawodowej w Stalowej Woli" 
-            />
-            <span>{isMobileL ? "Centrum Edukacji Zawodowej" : "CEZ"}</span>
-            <span>Stalowa Wola</span>
-        </NavbarLogoContainer>
-        <NavbarMenu>
-            <button onClick={themeCallback}/>
-            {isLaptop && 
-            <>
-                <NavbarLink href='#' text="Aktualności"/>
-                <NavbarLink href='#' text="Plan Lekcji"/>
-                <NavbarLink href='#' text="Kierunki"/>
-                <NavbarLink href='#' text="Kontakt"/>
-            </>
+    <>
+        <NavbarContainer className=' '>
+            <NavbarLogoContainer>
+                <img 
+                    src={logo_cez_dark}
+                    alt='Logo Centrum Edukacji Zawodowej w Stalowej Woli' 
+                />
+                <span>Centrum Edukacji {!isMobileL && <br />} Zawodowej
+                    <span>Stalowa Wola</span>
+                </span>
+                
+            </NavbarLogoContainer>
+            {isLaptop 
+                ? <NavbarMenu links = {links} /> 
+                : <NavbarButton onClick = {() => {setMobileMenuHidden(!MobileMenuHidden)}}>
+                    <FontAwesomeIcon 
+                        icon={MobileMenuHidden ? faBars : faTimes}
+                    />
+                </NavbarButton>
             }
-        </NavbarMenu>
-    </NavbarContainer>
-);};
+        </NavbarContainer>
+        {!isLaptop && <NavbarMenu links = {links} isHidden = {MobileMenuHidden}/>}
+    </>
+    );
+};
 
 export default Navbar;
