@@ -93,10 +93,10 @@ const Navbar = () => {
     const isMobileL = useMediaQuery({query: device.mobileL});
 
     const links = [
-        {path: '#', name: 'Strona główna'},
-        {path: '#', name: 'Aktualności'},
-        {path: '#', name: 'Plan Lekcji'},
-        {path: '#', name: 'Kontakt'},
+        {path: '/', name: 'Strona główna'},
+        {path: '/news', name: 'Aktualności'},
+        {path: '/timetable', name: 'Plan Lekcji'},
+        {path: '/contact', name: 'Kontakt'},
     ]
 
     return (
@@ -121,7 +121,7 @@ const Navbar = () => {
                 </NavbarButton>
             }
         </NavbarContainer>
-        {!isLaptop && <NavbarMenu links = {links} isHidden = {MobileMenuHidden}/>}
+        {!isLaptop && <NavbarMenu hide = {() => setMobileMenuHidden(true)} links = {links} isHidden = {MobileMenuHidden}/>}
     </>
     );
 };

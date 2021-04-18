@@ -5,7 +5,6 @@ import header_background from '../images/header-background.jpg'
 const HeaderContainer = styled.header`
     position: relative;
 
-    margin-top: 70px;
     width: 100%;
     height: 100px;
     padding-bottom: 25%;
@@ -31,6 +30,8 @@ const HeaderOverlay = styled.div`
 `;
 
 const Title = styled.h1`
+    margin: 0;
+
     color: ${({theme}) => theme.accentColor};
     font-weight: 300;
     font-size: min(4rem, 6vw);

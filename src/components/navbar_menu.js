@@ -82,11 +82,11 @@ const NavbarBackgroundOverlay = styled.div`
     }
 `;
 
-const NavbarMenu = ({links, isHidden}) => 
+const NavbarMenu = ({hide, links, isHidden}) => 
 <>
     <NavbarMenuContainer length={links.length} className={isHidden ? 'mobile-hidden' : null}>
         {links.map((link) => 
-            <NavbarLink key={link.name} to={link.path}>{link.name}</NavbarLink>
+            <NavbarLink key={link.name} to={link.path} onClick={hide}>{link.name}</NavbarLink>
         )}
     </NavbarMenuContainer>
     {!isHidden && <NavbarBackgroundOverlay />}
