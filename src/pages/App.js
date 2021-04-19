@@ -1,16 +1,18 @@
 import React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import Navbar from '../components/navbar';
 import {DarkTheme} from "../definitions/themes";
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import {createGlobalStyle} from 'styled-components';
-import Home from './Home';
-import News from './News';
-import Timetable from './Timetable';
-import Contact from './Contact';
 import ScrollToTop from 'react-router-scroll-top';
+
+import Navbar from '../components/navbar';
 import Footer from '../components/footer'
 
+import Home from './home';
+import News from './news';
+import Timetable from './timetable';
+import Contact from './contact';
+import NotFound from './not_found';
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -19,17 +21,11 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0px;
-        background-color: ${({theme}) => theme.backgroundColor};
-    }
-
-    * {
-        transition: 
-            background-color 0.1s linear,
-            color 0.1s linear;
+        background-color: ${({theme}) => theme.colors.background};
     }
 
     h2 {
-        color: ${({theme}) => theme.textSecondaryColor};
+        color: ${({theme}) => theme.colors.primary};
         font-family: ${({theme}) => theme.fonts.secondary};
         font-weight: 300;
         font-size: 1rem;
@@ -51,14 +47,17 @@ const App = () =>
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/news">
+                <Route exact path="/aktualnosci">
                     <News />
                 </Route>
-                <Route exact path="/timetable">
+                <Route exact path="/plan-lekcji">
                     <Timetable />
                 </Route>
-                <Route exact path="/contact">
+                <Route exact path="/kontakt">
                     <Contact />
+                </Route>
+                <Route path="*">
+                    <NotFound />
                 </Route>
             </Switch>
             <Footer />

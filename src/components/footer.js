@@ -8,18 +8,18 @@ const FooterContainer = styled.footer`
     justify-content: center;
     text-align: center;
 
-    box-shadow: 0px -5px 10px 0px ${({theme}) => theme.shadowColor};
+    box-shadow: 0px -5px 10px 0px ${({theme}) => theme.colors.shadow};
     min-height: 70px;
     padding: 20px;
 
     font-family: ${({theme}) => theme.fonts.primary};
-    color: ${({theme}) => theme.textSecondaryColor};
+    color: ${({theme}) => theme.colors.primary};
     font-weight: 100;
     letter-spacing: 0.1em;
 
     &>b {
         font-weight: 300;
-        color: ${({theme}) => theme.accentColor};
+        color: ${({theme}) => theme.colors.accent};
     }
 `;
 

@@ -22,11 +22,11 @@ const NavbarContainer = styled.div`
     padding: 10px;
     height: 50px;
 
-    box-shadow: 0px 5px 10px 0px ${({theme}) => theme.shadowColor};
+    box-shadow: 0px 5px 10px 0px ${({theme}) => theme.colors.shadow};
     z-index: 100;
 
     font-family: ${({theme}) => theme.fonts.primary};
-    background-color: ${({theme}) => theme.backgroundColor};
+    background-color: ${({theme}) => theme.colors.background};
 
     @media ${device.tablet} {
         letter-spacing: 0.1em;
@@ -53,7 +53,7 @@ const NavbarLogoContainer = styled(Link)`
     }
 
     &>span {
-        color: ${({theme}) => theme.accentColor};
+        color: ${({theme}) => theme.colors.accent};
         display: flex;
         flex-direction: column;
         align-items: left;
@@ -63,7 +63,7 @@ const NavbarLogoContainer = styled(Link)`
     }
 
     &>span>span {
-        color: ${({theme}) => theme.textSecondaryColor};
+        color: ${({theme}) => theme.colors.primary};
         font-weight: 100;
     }
 `;
@@ -79,7 +79,7 @@ const NavbarButton = styled.button`
     background: none;
     border: none;
 
-    color: ${({theme}) => theme.textSecondaryColor};
+    color: ${({theme}) => theme.colors.primary};
     font-size: 1.75rem;
 
     cursor: pointer;
@@ -95,9 +95,9 @@ const Navbar = () => {
 
     const links = [
         {key: 0, path: '/', name: 'Strona główna'},
-        {key: 1, path: '/news', name: 'Aktualności'},
-        {key: 2, path: '/timetable', name: 'Plan Lekcji'},
-        {key: 3, path: '/contact', name: 'Kontakt'},
+        {key: 1, path: '/aktualnosci', name: 'Aktualności'},
+        {key: 2, path: '/plan-lekcji', name: 'Plan Lekcji'},
+        {key: 3, path: '/kontakt', name: 'Kontakt'},
     ]
 
     return (

@@ -11,8 +11,7 @@ const HeaderContainer = styled.header`
 
     background-image: ${'url(' + header_background + ')'};
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: top;
 
     font-family: ${({theme}) => theme.fonts.primary};
     z-index: -1;
@@ -28,13 +27,13 @@ const HeaderOverlay = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: ${({theme}) => theme.backgroundColor + 'DD'};
+    background-color: ${({theme}) => theme.colors.secondary + 'DD'};
 `;
 
 const Title = styled.h1`
     margin: 0;
 
-    color: ${({theme}) => theme.accentColor};
+    color: ${({theme}) => theme.colors.accent};
     font-weight: 300;
     font-size: min(4rem, 6vw);
     letter-spacing: 0.1em;
@@ -42,7 +41,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.span`
-    color: ${({theme}) => theme.textSecondaryColor}!important;
+    color: ${({theme}) => theme.colors.primary}!important;
     font-weight: 200;
 `;
 

@@ -3,6 +3,14 @@ const global_fonts = {
     secondary: 'Montserrat'
 }
 
+const global_colors = {
+    background: '#292929',
+    primary: '#F2F2F2',
+    secondary: '#0D0D0D',
+    accent: '#EDB51E',
+    shadow: '#0D0D0D40'
+}
+
 /* export const LightTheme = {
     fonts: global_fonts,
 
@@ -15,10 +23,5 @@ const global_fonts = {
 
 export const DarkTheme = {
     fonts: global_fonts,
-
-    backgroundColor: '#292929',
-    textPrimaryColor: '#0D0D0D',
-    textSecondaryColor: '#F2F2F2',
-    accentColor: '#EDB51E',
-    shadowColor: '#0D0D0D40'
+    colors: global_colors
 };

@@ -14,7 +14,7 @@ const NavbarMenuContainer = styled.nav`
     left: 0px;
     right: 0px;
 
-    background-color: ${({theme}) => theme.backgroundColor};
+    background-color: ${({theme}) => theme.colors.background};
 
     z-index: 99;
 
@@ -27,41 +27,60 @@ const NavbarMenuContainer = styled.nav`
 
         width: auto;
         height: 100%;
-
     }
 
     &.mobile-hidden {
         position: fixed;
-        margin-top: ${({length}) => length * -50 + 'px'};
+        margin-top: ${({length}) => length * -70 + 'px'};
     }
 
     transition: margin-top 0.2s ease-in-out;
 `;
 
 const NavbarLink = styled(Link)`
-
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    flex-direction: column;
 
     padding-left: 20px;
+    padding-top: 20px;
     height: 50px;
 
-    color: ${({theme}) => theme.textSecondaryColor};
-    font-weight: 200;
+    color: ${({theme}) => theme.colors.primary};
+    font-weight: 300;
 
     &:not(:last-child):after {
+        display: block;
+        content: ' ';
+        border-bottom: 1px solid ${({theme}) => (theme.colors.primary + '40')};
+        margin-top: 20px;
+        width: 90vw;
+
         @media ${device.laptop} {
-            content: ' ';
             display: inline-block;
-            border-right: 1px solid ${({theme}) => (theme.textSecondaryColor + '40')};
+            border-bottom: none;
+            margin-top: 0px;
+            border-right: 1px solid ${({theme}) => (theme.colors.primary + '40')};
             padding-left: 20px;
+            width: 0px;
             height: 20px;
+        }
+        transition: transform 0.2s ease-in-out;
+    }
+
+    @media ${device.laptop} {
+        flex-direction: row;
+        padding-top: 0px;
+        &:hover {
+            transform: translateY(-5px);
+            color: ${({theme}) => theme.colors.accent};
+            &:after {
+                transform: translateY(5px);
+            }
         }
     }
 
-    :hover {
-        text-decoration: underline;
-    }
+    transition: transform 0.2s ease-in-out;
 `;
 
 const NavbarBackgroundOverlay = styled.div`
@@ -72,7 +91,7 @@ const NavbarBackgroundOverlay = styled.div`
     bottom: 0;
     left: 0;
 
-    background-color: ${({theme}) => (theme.shadowColor)};
+    background-color: ${({theme}) => (theme.colors.shadow)};
 
     z-index: 98;
 
