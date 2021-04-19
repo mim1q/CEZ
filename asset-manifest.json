@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.js": "/CEZ/static/js/main.f7a3d19f.chunk.js",
-    "main.js.map": "/CEZ/static/js/main.f7a3d19f.chunk.js.map",
+    "main.js": "/CEZ/static/js/main.348af0cd.chunk.js",
+    "main.js.map": "/CEZ/static/js/main.348af0cd.chunk.js.map",
     "runtime-main.js": "/CEZ/static/js/runtime-main.89887e96.js",
     "runtime-main.js.map": "/CEZ/static/js/runtime-main.89887e96.js.map",
-    "static/js/2.0778c81d.chunk.js": "/CEZ/static/js/2.0778c81d.chunk.js",
-    "static/js/2.0778c81d.chunk.js.map": "/CEZ/static/js/2.0778c81d.chunk.js.map",
+    "static/js/2.4efd7a01.chunk.js": "/CEZ/static/js/2.4efd7a01.chunk.js",
+    "static/js/2.4efd7a01.chunk.js.map": "/CEZ/static/js/2.4efd7a01.chunk.js.map",
     "index.html": "/CEZ/index.html",
-    "static/js/2.0778c81d.chunk.js.LICENSE.txt": "/CEZ/static/js/2.0778c81d.chunk.js.LICENSE.txt",
+    "static/js/2.4efd7a01.chunk.js.LICENSE.txt": "/CEZ/static/js/2.4efd7a01.chunk.js.LICENSE.txt",
     "static/media/header-background.7ee1e0c6.jpg": "/CEZ/static/media/header-background.7ee1e0c6.jpg",
-    "static/media/logo-cez-dark.9776b37f.svg": "/CEZ/static/media/logo-cez-dark.9776b37f.svg"
+    "static/media/logo-cez-dark.9776b37f.svg": "/CEZ/static/media/logo-cez-dark.9776b37f.svg",
+    "static/media/placeholder.abf7fe30.jpg": "/CEZ/static/media/placeholder.abf7fe30.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.89887e96.js",
-    "static/js/2.0778c81d.chunk.js",
-    "static/js/main.f7a3d19f.chunk.js"
+    "static/js/2.4efd7a01.chunk.js",
+    "static/js/main.348af0cd.chunk.js"
   ]
 }
