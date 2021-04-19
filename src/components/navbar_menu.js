@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {device} from '../definitions/devices';
-import Link from './styled/Link';
+import Link from './styled/link';
 
 const NavbarMenuContainer = styled.nav`
 
@@ -65,8 +65,7 @@ const NavbarLink = styled(Link)`
 `;
 
 const NavbarBackgroundOverlay = styled.div`
-    position: absolute;
-    display: fixed;
+    position: fixed;
 
     top: 0;
     right: 0;
@@ -86,7 +85,7 @@ const NavbarMenu = ({hide, links, isHidden}) =>
 <>
     <NavbarMenuContainer length={links.length} className={isHidden ? 'mobile-hidden' : null}>
         {links.map((link) => 
-            <NavbarLink key={link.name} to={link.path} onClick={hide}>{link.name}</NavbarLink>
+            <NavbarLink key={link.key} to={link.path} onClick={hide}>{link.name}</NavbarLink>
         )}
     </NavbarMenuContainer>
     {!isHidden && <NavbarBackgroundOverlay />}

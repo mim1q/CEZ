@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import logo_cez_dark from '../images/logo-cez-dark.svg';
-import {device} from '../definitions/devices';
+import device from '../definitions/devices';
 import {useMediaQuery} from 'react-responsive';
 import NavbarMenu from './navbar_menu'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+import Link from './styled/link';
 
 const NavbarContainer = styled.div`
     position: fixed;
@@ -40,7 +41,7 @@ const NavbarContainer = styled.div`
     }
 `;
 
-const NavbarLogoContainer = styled.div`
+const NavbarLogoContainer = styled(Link)`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -93,16 +94,16 @@ const Navbar = () => {
     const isMobileL = useMediaQuery({query: device.mobileL});
 
     const links = [
-        {path: '/', name: 'Strona główna'},
-        {path: '/news', name: 'Aktualności'},
-        {path: '/timetable', name: 'Plan Lekcji'},
-        {path: '/contact', name: 'Kontakt'},
+        {key: 0, path: '/', name: 'Strona główna'},
+        {key: 1, path: '/news', name: 'Aktualności'},
+        {key: 2, path: '/timetable', name: 'Plan Lekcji'},
+        {key: 3, path: '/contact', name: 'Kontakt'},
     ]
 
     return (
     <>
         <NavbarContainer className=' '>
-            <NavbarLogoContainer>
+            <NavbarLogoContainer to='/'>
                 <img 
                     src={logo_cez_dark}
                     alt='Logo Centrum Edukacji Zawodowej w Stalowej Woli' 

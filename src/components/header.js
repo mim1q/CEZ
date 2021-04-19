@@ -12,8 +12,10 @@ const HeaderContainer = styled.header`
     background-image: ${'url(' + header_background + ')'};
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 
     font-family: ${({theme}) => theme.fonts.primary};
+    z-index: -1;
 `;
 
 const HeaderOverlay = styled.div`
@@ -49,7 +51,7 @@ const Header = () =>
     <HeaderOverlay>
         <Title>
             Centrum Edukacji Zawodowej<br />
-            <Subtitle>w Stalowej Woli</Subtitle>
+            <Subtitle> w Stalowej Woli</Subtitle>
         </Title>
     </HeaderOverlay>
 </HeaderContainer>

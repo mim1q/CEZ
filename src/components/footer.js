@@ -9,7 +9,8 @@ const FooterContainer = styled.footer`
     text-align: center;
 
     box-shadow: 0px -5px 10px 0px ${({theme}) => theme.shadowColor};
-    height: 100px;
+    min-height: 70px;
+    padding: 20px;
 
     font-family: ${({theme}) => theme.fonts.primary};
     color: ${({theme}) => theme.textSecondaryColor};

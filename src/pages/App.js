@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
 import Navbar from '../components/navbar';
 import {DarkTheme} from "../definitions/themes";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import {createGlobalStyle} from 'styled-components';
 import Home from './Home';
 import News from './News';
@@ -29,51 +29,38 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        border: 1px dashed ${({theme}) => theme.accentColor};
-        margin: 20px;
-        height: 1000px;
-        width: calc(100% - 42px);
-
         color: ${({theme}) => theme.textSecondaryColor};
         font-family: ${({theme}) => theme.fonts.secondary};
-        text-align: center;
-    }
-
-    main {
+        font-weight: 300;
+        font-size: 1rem;
     }
 `;
 
 const AppContainer = styled.div`
-    margin-top: 70px;
+    padding-top: 70px;
 `
 
 const App = () =>
-<Router >
+<Router>
     <ThemeProvider theme={DarkTheme}>
         <ScrollToTop />
         <GlobalStyle />
         <AppContainer>
             <Navbar />
-            <main>
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route exact path="/news">
-                        <News />
-                    </Route>
-                    <Route exact path="/timetable">
-                        <Timetable />
-                    </Route>
-                    <Route exact path="/contact">
-                        <Contact />
-                    </Route>
-                </Switch>
-            </main>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/news">
+                    <News />
+                </Route>
+                <Route exact path="/timetable">
+                    <Timetable />
+                </Route>
+                <Route exact path="/contact">
+                    <Contact />
+                </Route>
+            </Switch>
             <Footer />
         </AppContainer>
     </ThemeProvider>
