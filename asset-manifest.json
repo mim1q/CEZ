@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.js": "/CEZ/static/js/main.348af0cd.chunk.js",
-    "main.js.map": "/CEZ/static/js/main.348af0cd.chunk.js.map",
+    "main.js": "/CEZ/static/js/main.1a65eae9.chunk.js",
+    "main.js.map": "/CEZ/static/js/main.1a65eae9.chunk.js.map",
     "runtime-main.js": "/CEZ/static/js/runtime-main.89887e96.js",
     "runtime-main.js.map": "/CEZ/static/js/runtime-main.89887e96.js.map",
-    "static/js/2.4efd7a01.chunk.js": "/CEZ/static/js/2.4efd7a01.chunk.js",
-    "static/js/2.4efd7a01.chunk.js.map": "/CEZ/static/js/2.4efd7a01.chunk.js.map",
+    "static/js/2.361e4565.chunk.js": "/CEZ/static/js/2.361e4565.chunk.js",
+    "static/js/2.361e4565.chunk.js.map": "/CEZ/static/js/2.361e4565.chunk.js.map",
     "index.html": "/CEZ/index.html",
-    "static/js/2.4efd7a01.chunk.js.LICENSE.txt": "/CEZ/static/js/2.4efd7a01.chunk.js.LICENSE.txt",
+    "static/js/2.361e4565.chunk.js.LICENSE.txt": "/CEZ/static/js/2.361e4565.chunk.js.LICENSE.txt",
+    "static/media/aktualnosci.12fc473d.jpg": "/CEZ/static/media/aktualnosci.12fc473d.jpg",
     "static/media/header-background.7ee1e0c6.jpg": "/CEZ/static/media/header-background.7ee1e0c6.jpg",
+    "static/media/kandydaci.ac349ee1.jpg": "/CEZ/static/media/kandydaci.ac349ee1.jpg",
     "static/media/logo-cez-dark.9776b37f.svg": "/CEZ/static/media/logo-cez-dark.9776b37f.svg",
-    "static/media/placeholder.abf7fe30.jpg": "/CEZ/static/media/placeholder.abf7fe30.jpg"
+    "static/media/placeholder.abf7fe30.jpg": "/CEZ/static/media/placeholder.abf7fe30.jpg",
+    "static/media/plan_lekcji.0fcdad5b.jpg": "/CEZ/static/media/plan_lekcji.0fcdad5b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.89887e96.js",
-    "static/js/2.4efd7a01.chunk.js",
-    "static/js/main.348af0cd.chunk.js"
+    "static/js/2.361e4565.chunk.js",
+    "static/js/main.1a65eae9.chunk.js"
   ]
 }
