@@ -1,3 +1,8 @@
 kandydaci.jpg: Photo by Green Chameleon on Unsplash
 plan_lekcji.jpg: Photo by Emma Matthews Digital Content Production on Unsplash
 aktualnosci.jpg: Photo by AbsolutVision on Unsplash
+osiagniecia.jpg: Photo by Giorgio Trovato on Unsplash
+projekty.jpg: Photo by Dylan Gillis on Unsplash
+dodatkowe.jpg: Photo by Annika Gordon on Unsplash
+galeria.jpg: Photo by Soragrit Wongsa on Unsplash
+kontakt.jpg: Photo by Scott Graham on Unsplash

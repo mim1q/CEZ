@@ -4,7 +4,7 @@ import devices from '../definitions/devices';
 import {lighten} from 'polished';
 import Link from './styled/link';
 
-const ArticleContainer = styled(Link)`
+const CardContainer = styled(Link)`
 
     margin: 20px;
     border-radius: 20px;
@@ -31,7 +31,7 @@ const ArticleContainer = styled(Link)`
                 box-shadow 0.2s ease-in-out;
 `;
 
-const ArticleTitle = styled.h2`
+const CardTitle = styled.h2`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,9 +40,10 @@ const ArticleTitle = styled.h2`
     font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 0.1em;
+    text-align: center;
 `;
 
-const ArticleImageWrapper = styled.div`
+const CardImageWrapper = styled.div`
     position: relative;
     border-radius: 10px;
     width: 100%;
@@ -50,7 +51,7 @@ const ArticleImageWrapper = styled.div`
     overflow: hidden;
 `;
 
-const ArticleImage = styled.img`
+const CardImage = styled.img`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -58,12 +59,12 @@ const ArticleImage = styled.img`
     object-fit: cover;
 `;
 
-const Article = ({title, imgSrc, href}) => 
-<ArticleContainer to={href}>
-    <ArticleTitle>{title}</ArticleTitle>
-    <ArticleImageWrapper >
-        <ArticleImage src={imgSrc} alt={title} />
-    </ArticleImageWrapper>
-</ArticleContainer>
+const Card = ({title, imgSrc, href}) => 
+<CardContainer to={href}>
+    <CardTitle>{title}</CardTitle>
+    <CardImageWrapper >
+        <CardImage src={imgSrc} alt={title} />
+    </CardImageWrapper>
+</CardContainer>
 
-export default Article;
+export default Card;

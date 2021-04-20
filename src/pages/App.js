@@ -8,10 +8,10 @@ import ScrollToTop from 'react-router-scroll-top';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer'
 
-import Home from './home';
-import News from './news';
-import Timetable from './timetable';
-import Contact from './contact';
+import StronaGlowna from './strona_glowna';
+import Aktualnosci from './aktualnosci';
+import PlanLekcji from './plan_lekcji';
+import Kontakt from './kontakt';
 import NotFound from './not_found';
 
 const GlobalStyle = createGlobalStyle`
@@ -45,16 +45,16 @@ const App = () =>
             <Navbar />
             <Switch>
                 <Route exact path="/">
-                    <Home />
+                    <StronaGlowna />
                 </Route>
                 <Route exact path="/aktualnosci">
-                    <News />
+                    <Aktualnosci />
                 </Route>
                 <Route exact path="/plan-lekcji">
-                    <Timetable />
+                    <PlanLekcji />
                 </Route>
                 <Route exact path="/kontakt">
-                    <Contact />
+                    <Kontakt />
                 </Route>
                 <Route path="*">
                     <NotFound />

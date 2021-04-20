@@ -8,9 +8,9 @@ const Main = styled.main`
     height: 100vh;
 `;
 
-const Timetable = () => 
+const PlanLekcji = () => 
 <Main>
     <h2>Tutaj będzie strona z planami lekcji</h2>
 </Main>
 
-export default Timetable;
+export default PlanLekcji;

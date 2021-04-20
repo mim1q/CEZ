@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
     background-position: top;
 
     font-family: ${({theme}) => theme.fonts.primary};
-    z-index: -1;
+    z-index: 0;
 `;
 
 const HeaderOverlay = styled.div`
@@ -38,11 +38,13 @@ const Title = styled.h1`
     font-size: min(4rem, 6vw);
     letter-spacing: 0.1em;
     text-align: center;
+    line-height: 1em;
 `;
 
 const Subtitle = styled.span`
     color: ${({theme}) => theme.colors.primary}!important;
     font-weight: 200;
+    line-height: 2em;
 `;
 
 const Header = () =>
@@ -50,7 +52,7 @@ const Header = () =>
     <HeaderOverlay>
         <Title>
             Centrum Edukacji Zawodowej<br />
-            <Subtitle> w Stalowej Woli</Subtitle>
+            <Subtitle>w Stalowej Woli</Subtitle>
         </Title>
     </HeaderOverlay>
 </HeaderContainer>

@@ -8,9 +8,9 @@ const Main = styled.main`
     height: 100vh;
 `;
 
-const Contact = () => 
+const Aktualnosci = () => 
 <Main>
-    <h2>Tutaj będzie strona z danymi kontaktowymi</h2>
+    <h2>Tutaj będzie strona z aktualnościami</h2>
 </Main>
 
-export default Contact;
+export default Aktualnosci;
