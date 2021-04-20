@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.js": "/CEZ/static/js/main.1a65eae9.chunk.js",
-    "main.js.map": "/CEZ/static/js/main.1a65eae9.chunk.js.map",
+    "main.js": "/CEZ/static/js/main.41be2798.chunk.js",
+    "main.js.map": "/CEZ/static/js/main.41be2798.chunk.js.map",
     "runtime-main.js": "/CEZ/static/js/runtime-main.89887e96.js",
     "runtime-main.js.map": "/CEZ/static/js/runtime-main.89887e96.js.map",
     "static/js/2.361e4565.chunk.js": "/CEZ/static/js/2.361e4565.chunk.js",
     "static/js/2.361e4565.chunk.js.map": "/CEZ/static/js/2.361e4565.chunk.js.map",
     "index.html": "/CEZ/index.html",
     "static/js/2.361e4565.chunk.js.LICENSE.txt": "/CEZ/static/js/2.361e4565.chunk.js.LICENSE.txt",
-    "static/media/aktualnosci.12fc473d.jpg": "/CEZ/static/media/aktualnosci.12fc473d.jpg",
+    "static/media/aktualnosci.1a9ccb65.jpg": "/CEZ/static/media/aktualnosci.1a9ccb65.jpg",
+    "static/media/dodatkowe.1eff25bc.jpg": "/CEZ/static/media/dodatkowe.1eff25bc.jpg",
+    "static/media/galeria.65230b19.jpg": "/CEZ/static/media/galeria.65230b19.jpg",
     "static/media/header-background.7ee1e0c6.jpg": "/CEZ/static/media/header-background.7ee1e0c6.jpg",
-    "static/media/kandydaci.ac349ee1.jpg": "/CEZ/static/media/kandydaci.ac349ee1.jpg",
+    "static/media/kandydaci.c1b2e07d.jpg": "/CEZ/static/media/kandydaci.c1b2e07d.jpg",
+    "static/media/kontakt.7be49481.jpg": "/CEZ/static/media/kontakt.7be49481.jpg",
     "static/media/logo-cez-dark.9776b37f.svg": "/CEZ/static/media/logo-cez-dark.9776b37f.svg",
-    "static/media/placeholder.abf7fe30.jpg": "/CEZ/static/media/placeholder.abf7fe30.jpg",
-    "static/media/plan_lekcji.0fcdad5b.jpg": "/CEZ/static/media/plan_lekcji.0fcdad5b.jpg"
+    "static/media/osiagniecia.d0a3f10a.jpg": "/CEZ/static/media/osiagniecia.d0a3f10a.jpg",
+    "static/media/plan_lekcji.44dd4514.jpg": "/CEZ/static/media/plan_lekcji.44dd4514.jpg",
+    "static/media/projekty.172ff622.jpg": "/CEZ/static/media/projekty.172ff622.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.89887e96.js",
     "static/js/2.361e4565.chunk.js",
-    "static/js/main.1a65eae9.chunk.js"
+    "static/js/main.41be2798.chunk.js"
   ]
 }
